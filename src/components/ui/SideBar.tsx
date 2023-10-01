@@ -8,6 +8,8 @@ import {
 } from "@ant-design/icons";
 import type { MenuProps } from "antd";
 import { Layout, Menu } from "antd";
+import { sidebarItems } from "@/constants/sidebarItems";
+import { USER_ROLE } from "@/constants/role";
 
 const { Sider } = Layout;
 
@@ -45,6 +47,8 @@ const items: MenuItem[] = [
 const SideBar = () => {
   const [collapsed, setCollapsed] = useState(false);
 
+  const role = USER_ROLE.STUDENT;
+
   return (
     <Sider
       collapsible
@@ -75,7 +79,7 @@ const SideBar = () => {
         theme="dark"
         defaultSelectedKeys={["1"]}
         mode="inline"
-        items={items}
+        items={sidebarItems(role)}
       />
     </Sider>
   );
