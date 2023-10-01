@@ -50,8 +50,27 @@ const SideBar = () => {
       collapsible
       collapsed={collapsed}
       onCollapse={(value) => setCollapsed(value)}
+      width={280}
+      style={{
+        overflow: "auto",
+        position: "sticky",
+        height: "100vh",
+        left: 0,
+        top: 0,
+        bottom: 0,
+      }}
     >
-      <div className="demo-logo-vertical" />
+      <div
+        style={{
+          color: "white",
+          fontSize: "2rem",
+          textAlign: "center",
+          fontWeight: "bold",
+          marginBottom: "1rem",
+        }}
+      >
+        PH-UNIVERSITY
+      </div>
       <Menu
         theme="dark"
         defaultSelectedKeys={["1"]}
